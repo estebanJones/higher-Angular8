@@ -1,0 +1,24 @@
+<h1 class="center">Pokémons</h1>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let pokemon of pokemons" class="col-4">
+            <a [routerLink]="['pokemon/pokemon.id']" routerLinkActive="router-link-active" >
+                <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmnBorderCard="red">
+                    <div class="card-image">
+                        <img [src]="pokemon.picture" alt="pokemon.name">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>{{ pokemon.name }}</p>
+                            <p><small>{{ pokemon.createdAt | date:"dd/MM/yyyy"}}</small></p>
+                            <span *ngFor="let type of pokemon.types" 
+                                class="{{ type | pokemonTypeColor }}">
+                                {{type}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

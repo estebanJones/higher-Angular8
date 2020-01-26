@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    font-size: 2.5em;
+
+
+    li {
+        margin-right: 10px;
+    }
+
+    li:hover {
+        border-bottom: 2px solid red;
+    }
+
+
+}

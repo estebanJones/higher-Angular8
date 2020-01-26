@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'higher-v1';
+
+  title: string = 'higher-v1';
+  
 }
